@@ -1,0 +1,20 @@
+spring:
+  h2:
+    console:
+      enabled: true  # H2 웹 콘솔을 사용하겠다는 의미
+
+
+    ## https://github.com/HomoEfficio/dev-tips/blob/master/IntelliJ%EC%97%90%EC%84%9C-H2-DB-%EC%97%B0%EA%B2%B0%ED%95%98%EA%B3%A0-JPA-Console-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0.md
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+#    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+
+logging:
+  level:
+    org.hibernate.SQL: debug
+    org.hibernate.type: trace
